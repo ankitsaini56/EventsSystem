@@ -15,4 +15,10 @@ FOUNDATION_EXPORT const unsigned char EventsSystemVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <EventsSystem/PublicHeader.h>
 
+#import <EventsSystem/EventsBridge.h>
+//#import <EventsSystem/EventsCBridge.h>
+//void myFunction(void);
+
+#import <EventsSystem/EventsDataBase.hpp>
+
 
