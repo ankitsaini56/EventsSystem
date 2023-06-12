@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "EventsSystem"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "An Events System Cocoapods Library"
 
   # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
   A Cocoapods Library for adding events in memory and getting aggregated events
                    DESC
 
-  spec.homepage     = "https://github.com/ankitsaini56/EventsSystem"
+  spec.homepage     = "https://github.com/ankitsaini56/EventsSystem.git"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -81,7 +81,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/ankitsaini56/EventsSystem.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/ankitsaini56/EventsSystem.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
