@@ -39,7 +39,7 @@ public class EventsManager:NSObject, EventsManagerProtocol {
         }
 
         let eventMemory = addEventsToMemory(&keyValueArray, Int32(keyValueArray.count), savedEventMemory, Int32(savedEventMemorySize))
-        let number = NSNumber(value: UInt(bitPattern: eventMemory))
+//        let number = NSNumber(value: UInt(bitPattern: eventMemory))
         //Save Events memory address and size
         Session.shared.eventSize = savedEventMemorySize + events.count
         Session.shared.eventAddress = eventMemory

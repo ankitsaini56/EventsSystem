@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func getEventAction(_ sender: Any) {
-        let events = eventManager?.getAggregatedAnswer(key: "key4")
+        let events = eventManager?.getAggregatedAnswer(key: "key3")
         guard let events = events else { return }
         eventTestLabel.text = "10Sec = \(String(describing: events.first)) 20Sec = \(String(describing: events.last))"
     }
