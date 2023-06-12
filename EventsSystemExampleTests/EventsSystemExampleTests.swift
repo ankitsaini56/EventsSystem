@@ -1,42 +1,21 @@
 //
-//  EventsSystemTests.swift
-//  EventsSystemTests
+//  EventsSystemExampleTests.swift
+//  EventsSystemExampleTests
 //
-//  Created by Ankit Saini on 23/05/23.
+//  Created by Ankit Saini on 25/05/23.
 //
 
 import XCTest
-@testable import EventsSystem
+@testable import EventsSystemExample
 
-final class EventsSystemTests: XCTestCase {
-    var eventSystem: EventsManagerProtocol!
-
+final class EventsSystemExampleTests: XCTestCase {
 
     override func setUpWithError() throws {
-        eventSystem = EventsManager()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testAddEvent1() {
-        XCTAssertTrue(eventSystem.addEventToSystem(events: ["key1": "1", "key2": "2", "key3": "3"]))
-    }
-
-    func testGetEvent() {
-        _ = eventSystem.addEventToSystem(events: ["key1": "1", "key2": "2", "key3": "3"])
-        XCTAssertEqual(eventSystem.getAggregatedAnswer(key: "key1"), [1,1])
-    }
-
-    func testGetEventWhenWrongKey() {
-        XCTAssertEqual(eventSystem.getAggregatedAnswer(key: "key4"), [])
-    }
-
-
-    func testGetEventWhenNoEventsAdded() {
-        XCTAssertEqual(eventSystem.getAggregatedAnswer(key: "key1"), [])
     }
 
     func testExample() throws {

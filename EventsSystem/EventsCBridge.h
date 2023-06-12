@@ -9,8 +9,29 @@
 #define EventsCBridge_h
 
 #include <stdio.h>
+#include <stdbool.h>
 
 #endif /* EventsCBridge_h */
 
+//typedef struct {
+//    const char* key;
+//    int value;
+//} EventsKeyValue;
 
-void myFunction(void);
+
+typedef struct {
+    char* key;
+    int value;
+    int timestamp;
+} EventsKeyValue;
+
+EventsKeyValue* addEventsToMemory(EventsKeyValue* keyValueArray, int size, EventsKeyValue* savedEventsMemory, int savedEventsSize);
+int getEventsForTime(int timeInSeonds, int currentTimeStamp, EventsKeyValue* savedMemory, int savedEventSize, char* key);
+
+
+typedef struct {
+    EventsKeyValue event[100];
+} EventsData;
+
+
+

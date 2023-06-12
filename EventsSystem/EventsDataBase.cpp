@@ -11,6 +11,6 @@
 
 using namespace std;
 
-void addEventToSystem(void) {
+void addEventToSystemInMemory() {
     cout<<"Event added";
 }

@@ -11,6 +11,6 @@
 #include <stdio.h>
 
 
-void addEventToSystem(void);
+void addEventToSystemInMemory();
 
 #endif /* EventsDataBase_hpp */
