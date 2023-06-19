@@ -16,8 +16,12 @@ int main() {
 
 EventsKeyValue* eventsMemory;
 
-EventsKeyValue* addEventsToMemory(EventsKeyValue* keyValueArray, int size, EventsKeyValue* savedEventsMemory, int savedEventsSize) {
 
+
+EventsKeyValue* addEventsToMemory(EventsKeyValue* keyValueArray, int size, EventsKeyValue* savedEventsMemory, int savedEventsSize) {
+    //Saving new events locally
+    EventsKeyValue* newEvents = keyValueArray;
+    keyValueArray = NULL;
     if (savedEventsMemory == NULL) {
         size_t totalSize = size * sizeof(EventsKeyValue);
 
@@ -28,7 +32,8 @@ EventsKeyValue* addEventsToMemory(EventsKeyValue* keyValueArray, int size, Event
             return NULL;
         }
         // Copy the struct array to the allocated memory
-        memcpy(eventsMemory, keyValueArray, totalSize);
+        memcpy(eventsMemory, newEvents, totalSize);
+        newEvents = NULL;
         return eventsMemory;
     }
     else {
@@ -42,8 +47,10 @@ EventsKeyValue* addEventsToMemory(EventsKeyValue* keyValueArray, int size, Event
             updateKeyValues[i] = savedEventsMemory[i];
         }
         for (int j = 0; j < size; j++) {
-            updateKeyValues[i + j] = keyValueArray[j];
+            updateKeyValues[i + j] = newEvents[j];
         }
+        newEvents = NULL;
+        savedEventsMemory = NULL;
         //Free old memory - no need as we are doing realloc
 //        free(savedEventsMemory);
         //reallocate and save the update events in updated memory
@@ -55,6 +62,7 @@ EventsKeyValue* addEventsToMemory(EventsKeyValue* keyValueArray, int size, Event
             return NULL;
         }
         memcpy(eventsMemory, updateKeyValues, updateEventsSize);
+
         return eventsMemory;
     }
 }
@@ -70,4 +78,11 @@ int getEventsForTime(int timeInSeonds, int currentTimeStamp, EventsKeyValue* sav
         }
     }
     return totalEvents;
+}
+
+void freeMemory(void) {
+    if (eventsMemory != NULL) {
+        free(eventsMemory);
+        eventsMemory = NULL;
+    }
 }

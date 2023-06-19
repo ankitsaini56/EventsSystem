@@ -14,4 +14,9 @@ final class Session {
 
     private init() {
     }
+
+    func reset() {
+        eventSize = 0
+        eventAddress = nil
+    }
 }

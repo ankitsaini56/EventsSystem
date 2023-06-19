@@ -19,6 +19,8 @@ final class EventsSystemTests: XCTestCase {
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        Session.shared.reset()
+        eventSystem = nil
     }
 
     func testAddEvent1() {
@@ -53,5 +55,6 @@ final class EventsSystemTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
 
 }

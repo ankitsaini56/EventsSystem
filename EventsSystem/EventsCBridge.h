@@ -27,6 +27,7 @@ typedef struct {
 
 EventsKeyValue* addEventsToMemory(EventsKeyValue* keyValueArray, int size, EventsKeyValue* savedEventsMemory, int savedEventsSize);
 int getEventsForTime(int timeInSeonds, int currentTimeStamp, EventsKeyValue* savedMemory, int savedEventSize, char* key);
+void freeMemory(void);
 
 
 typedef struct {

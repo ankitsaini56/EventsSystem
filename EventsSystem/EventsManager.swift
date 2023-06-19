@@ -30,20 +30,20 @@ public class EventsManager:NSObject, EventsManagerProtocol {
         let savedEventMemory : UnsafeMutablePointer<EventsKeyValue>? = Session.shared.eventAddress
         let savedEventMemorySize = Session.shared.eventSize
 
-
-
         for (key,value) in events {
-            let cString = strdup(key)
+            var cString = strdup(key)
             let event = EventsKeyValue(key: cString, value: Int32(value) ?? 0, timestamp: Int32(Date().timeIntervalSince1970))
             keyValueArray.append(event)
+            cString = nil
         }
 
         let eventMemory = addEventsToMemory(&keyValueArray, Int32(keyValueArray.count), savedEventMemory, Int32(savedEventMemorySize))
-//        let number = NSNumber(value: UInt(bitPattern: eventMemory))
+
         //Save Events memory address and size
         Session.shared.eventSize = savedEventMemorySize + events.count
         Session.shared.eventAddress = eventMemory
 
+        //        let number = NSNumber(value: UInt(bitPattern: eventMemory))
 //        UserDefaults.standard.set(number, forKey: "SavedEventMemory")
 //        UserDefaults.standard.set((savedEventMemorySize + events.count), forKey: "SavedEventMemorySize")
         return eventMemory == nil ? false : true
@@ -75,6 +75,11 @@ public class EventsManager:NSObject, EventsManagerProtocol {
             print("Error in getting events")
         }
         return events
+    }
+
+    deinit {
+        Session.shared.reset()
+        freeMemory()
     }
 
 }

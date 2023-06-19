@@ -7,69 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BCC1D024-2D56-4E2E-A1E4-0943AE7287F6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EventsSystem/EventsManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "addEventToSystem(events:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BCC1D024-2D56-4E2E-A1E4-0943AE7287F6 - 1228cffd3454be40"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EventsSystem.EventsManager.getAggregatedAnswer(key: Swift.String) -&gt; Swift.Array&lt;Swift.Int&gt;"
-                  moduleName = "EventsSystem"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ankitsaini/Documents/Projects/Personal%20POC%20test/EventsSystem/EventsSystem/EventsManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "464">
-               </Location>
-               <Location
-                  uuid = "BCC1D024-2D56-4E2E-A1E4-0943AE7287F6 - 1228cffd3454be40"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EventsSystem.EventsManager.getAggregatedAnswer(key: Swift.String) -&gt; Swift.Array&lt;Swift.Int&gt;"
-                  moduleName = "EventsSystem"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ankitsaini/Documents/Projects/Personal%20POC%20test/EventsSystem/EventsSystem/EventsManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "820">
-               </Location>
-               <Location
-                  uuid = "BCC1D024-2D56-4E2E-A1E4-0943AE7287F6 - 59c593260ae17c09"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EventsSystem.EventsManager.addEventToSystem(events: Swift.Dictionary&lt;Swift.String, Swift.Int&gt;) -&gt; Swift.Bool"
-                  moduleName = "EventsSystem"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ankitsaini/Documents/Projects/Personal%20POC%20test/EventsSystem/EventsSystem/EventsManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "3244">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A8661C99-F50D-4A44-8883-B8C0A0D1E11D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
